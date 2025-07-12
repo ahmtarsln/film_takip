@@ -11,9 +11,9 @@ Bu uygulama, kullanıcıların izledikleri filmleri takip etmelerini sağlayan b
 ## Özellikler
 
 - Kullanıcı kayıt ve giriş sistemi
+- Kullanıcıya özel film listesi
 - OMDB API ile film arama
 - Film bilgilerini otomatik doldurma
-- Kişisel film listesi
 - Film değerlendirme ve yorum sistemi
 
 ## Kurulum
