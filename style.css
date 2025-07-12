@@ -1,0 +1,501 @@
+/* style.css - Enhanced Movie Project Design */
+
+/* Base Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+a {
+    color: #FF7043;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FF8A65;
+}
+
+h2, h3, h4 {
+    color: #FF7043;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #FF7043;
+}
+
+/* Forms */
+form {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #1E1E1E;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #2D2D2D;
+    color: #fff;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="submit"],
+button {
+    background: #FF7043;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background: #FF5722;
+}
+
+/* Navigation and Header */
+.top-echo {
+    display: block;
+    text-align: right;
+    padding: 10px 20px;
+    background: #1E1E1E;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Actions */
+.header-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.film-ekle-btn {
+    background: #FF7043;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(255, 112, 67, 0.3);
+}
+
+.film-ekle-btn:hover {
+    background: #FF5722;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 112, 67, 0.4);
+}
+
+/* Film Sayaci */
+.film-sayaci {
+    text-align: center;
+    margin: 20px 0 30px;
+    font-size: 1.2rem;
+    color: #FF7043;
+    padding: 15px;
+    background: rgba(255, 112, 67, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 112, 67, 0.2);
+}
+
+/* Filmler Listesi */
+.filmler-listesi {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.film-item {
+    background: #1E1E1E;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    gap: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.film-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 112, 67, 0.3);
+}
+
+.film-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #FF7043, #FF8A65);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.film-item:hover::before {
+    opacity: 1;
+}
+
+.film-poster-container {
+    flex-shrink: 0;
+}
+
+.film-poster {
+    width: 150px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.film-item:hover .film-poster {
+    transform: scale(1.05);
+}
+
+.film-detaylar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.film-baslik {
+    font-size: 1.6rem;
+    margin: 0;
+    color: #FF7043;
+    font-weight: 600;
+}
+
+.film-bilgi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.film-bilgi {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+}
+
+.film-bilgi strong {
+    color: #FF8A65;
+}
+
+.film-konu {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    font-style: italic;
+    line-height: 1.5;
+    color: #d0d0d0;
+    border-left: 4px solid #FF7043;
+}
+
+.film-konu strong {
+    color: #FF7043;
+}
+
+.kullanici-degerlendirme {
+    background: rgba(255, 112, 67, 0.08);
+    padding: 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 112, 67, 0.2);
+}
+
+.puan-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.puan-badge {
+    background: #FF7043;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.dusunceler {
+    color: #e0e0e0;
+}
+
+.dusunceler p {
+    margin: 8px 0 0;
+    line-height: 1.5;
+}
+
+.film-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+}
+
+.ekleme-tarihi {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+.sil-form {
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    max-width: none;
+}
+
+.sil-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.sil-btn:hover {
+    background: #c82333;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
+}
+
+/* Boş Liste */
+.bos-liste {
+    text-align: center;
+    color: #FF7043;
+    font-size: 1.2rem;
+    margin: 50px 0;
+    padding: 40px;
+    background: rgba(255, 112, 67, 0.1);
+    border-radius: 12px;
+    border: 2px dashed rgba(255, 112, 67, 0.3);
+}
+
+.bos-liste h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.bos-liste a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #FF7043;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.bos-liste a:hover {
+    background: #FF5722;
+    transform: translateY(-2px);
+}
+
+/* Film Arama (Film Ekle Page) */
+.film-arama {
+    background: #1E1E1E;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+#filmAramaInput {
+    width: 70%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background: #2D2D2D;
+    color: #fff;
+}
+
+.film-sonuclar {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.film-card {
+    background: #2D2D2D;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.film-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.film-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.secilen-film {
+    background: #2E7D32;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.loading {
+    text-align: center;
+    color: #FF7043;
+    font-style: italic;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .film-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .film-poster {
+        width: 200px;
+        height: 280px;
+        margin: 0 auto;
+    }
+    
+    .film-bilgi-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .film-footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .film-sonuclar {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .header-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .film-item {
+        padding: 20px;
+    }
+    
+    .film-poster {
+        width: 150px;
+        height: 220px;
+    }
+    
+    .film-baslik {
+        font-size: 1.3rem;
+    }
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+/* Error/Success Messages */
+.error-message {
+    color: #EF5350;
+    padding: 12px;
+    background: rgba(239, 83, 80, 0.1);
+    border-radius: 6px;
+    margin: 10px 0;
+    border: 1px solid rgba(239, 83, 80, 0.2);
+}
+
+.success-message {
+    color: #66BB6A;
+    padding: 12px;
+    background: rgba(102, 187, 106, 0.1);
+    border-radius: 6px;
+    margin: 10px 0;
+    border: 1px solid rgba(102, 187, 106, 0.2);
+}
