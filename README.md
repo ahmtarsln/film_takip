@@ -2,6 +2,12 @@
 
 Bu uygulama, kullanıcıların izledikleri filmleri takip etmelerini sağlayan bir web uygulamasıdır.
 
+
+## 📹 Tanıtım Videosu
+
+[![Video Başlık](https://img.youtube.com/vi/Gxg5hdPOFXQ/0.jpg)](https://www.youtube.com/watch?v=Gxg5hdPOFXQ)
+
+
 ## Özellikler
 
 - Kullanıcı kayıt ve giriş sistemi
