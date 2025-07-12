@@ -5,7 +5,7 @@ Bu uygulama, kullanıcıların izledikleri filmleri takip etmelerini sağlayan b
 
 ## 📹 Tanıtım Videosu
 
-[![Video Başlık](https://img.youtube.com/vi/Gxg5hdPOFXQ/0.jpg)](https://www.youtube.com/watch?v=Gxg5hdPOFXQ)
+[![Video Başlık](https://img.youtube.com/vi/Gxg5hdPOFXQ/1.jpg)](https://www.youtube.com/watch?v=Gxg5hdPOFXQ)
 
 
 ## Özellikler
